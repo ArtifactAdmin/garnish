@@ -1,0 +1,21 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "garnish"
+version = "0.1.0"
+description = "A library providing decorative food embellishments: recipes, preparation techniques, and plating guidelines for culinary garnishes"
+requires-python = ">=3.9"
+readme = "README.md"
+license = { text = "MIT" }
+
+[project.optional-dependencies]
+dev = ["pytest>=7.0"]
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["garnish*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
